@@ -6,12 +6,11 @@ import router from "./routes/router.js";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import dotenv from "dotenv";
 const app = express();
-dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+dotenv.config();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
