@@ -5,7 +5,8 @@
   "license": "ISC",
   "scripts": {
     "start": "nodemon ./server/index.js",
-    "heroku-postbuild": "NODE_ENV=production cd client && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "build": "webpack"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
